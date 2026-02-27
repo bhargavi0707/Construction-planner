@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Plan - AI Construction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <h2>AI Construction</h2>
+    <div><a href="index.html">Home</a><a href="plan.html">Plan</a></div>
+  </nav>
+
+  <section class="page active">
+    <h2>Create Construction Plan (Sq Yards)</h2>
+
+    <form id="planForm">
+      <!-- Updated: Project Type with datalist suggestions -->
+      <input 
+        list="projectTypes" 
+        type="text" 
+        placeholder="Project Type (e.g. 3BHK Independent House)" 
+        required
+      >
+      <datalist id="projectTypes">
+        <option value="2BHK Independent House">
+        <option value="3BHK Independent House">
+        <option value="4BHK Independent House">
+        <option value="2BHK Gated Villa">
+        <option value="3BHK Gated Villa">
+        <option value="4BHK Luxury Villa">
+        <option value="Duplex House">
+        <option value="G+1 Residential House">
+        <option value="G+2 Independent House">
+        <option value="Small Plot House (100-150 sq yd)">
+        <option value="Medium Plot House (200-300 sq yd)">
+        <option value="Large Plot Villa (400+ sq yd)">
+        <option value="Budget Home Construction">
+        <option value="Premium / Luxury Home">
+      </datalist>
+
+      <input type="number" id="areaInput" placeholder="Area (sq yards)" required>
+      <input type="number" id="budgetInput" placeholder="Your Budget (INR)" required>
+      <button type="submit">Generate Plan</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

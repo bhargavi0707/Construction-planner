@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h2 {
+  color: #fbbf24;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+.hero button,
+.page button {
+  padding: 14px 32px;
+  background: #fbbf24;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero button:hover,
+.page button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(251,191,36,0.5);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 60px 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #fbbf24;
+  box-shadow: 0 15px 40px rgba(251,191,36,0.15);
+}
+
+.page {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.page h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: #fbbf24;
+}
+
+input {
+  padding: 14px;
+  margin: 12px;
+  width: 280px;
+  max-width: 90%;
+  border-radius: 10px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+.result-box {
+  margin: 40px auto;
+  max-width: 700px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.page {
+  animation: fadeIn 0.6s ease;
+}
